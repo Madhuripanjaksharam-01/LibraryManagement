@@ -1,0 +1,83 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    margin: 0;
+    padding: 0;
+}
+
+#div1 {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.3);
+    width: 80%;
+    margin: 0 auto;
+}
+
+#div3, #div4 {
+    width: 45%;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+table {
+    width: 100%;
+}
+
+td {
+    padding: 10px;
+    font-size: 18px;
+    color: #555;
+}
+
+input[type="text"], input[type="number"], input[type="date"], select {
+    padding: 8px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+form {
+    margin: 0;
+}
+
+@media (max-width: 768px) {
+    #div3, #div4 {
+        width: 100%;
+        margin-left: 0;
+        margin-right: 0;
+    }
+
+    table {
+        text-align: left;
+    }
+
+    td {
+        display: block;
+        width: 100%;
+    }
+}

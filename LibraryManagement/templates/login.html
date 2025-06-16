@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="{% static 'css/login.css' %}">
+    <style>
+        /* Add some margin below each form element */
+        #table1 td {
+            padding: 10px;
+        }
+        /* Add spacing between the submit button and signup links */
+        .submit-row {
+            margin-top: 20px;
+        }
+        .signup-links {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body style="background-image: url('{% static 'images/img1.jpg' %}'); background-size: cover; background-repeat: no-repeat;">
+
+    <h2 style="font-size:90px;" align="center">Login Page</h2>
+    <form action="" method="post">
+        {% csrf_token %}
+        <h3 style="color:white;" align="center"><u>{{ data }}</u></h3>
+        <div id="div3">
+            <table align="center" id="table1">
+                <tr>
+                    <td><label for="txtName">UserName:</label><br></td>
+                    <td><input name="userName" type="text" id="txtName" required><br><br></td>
+                </tr>
+                <tr>
+                    <td><label for="txtPswd">Password:</label></td>
+                    <td><input name="userPassword" type="password" id="txtPswd" required><br><br></td>
+                </tr>
+                <tr class="submit-row">
+                    <td colspan="2" align="center">
+                        <input type="submit" name="btnSub" value="Submit">
+                    </td>
+                </tr>
+                <tr class="signup-links">
+                    <td colspan="2" align="right">
+                        <a href="{% url 'register' %}">Admin Sign Up</a>
+                    </td>
+                </tr>
+                <tr class="signup-links">
+                    <td colspan="2" align="right">
+                        <a href="{% url 'addstud' %}">Student Sign Up</a>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </form>
+</body>
+</html>
